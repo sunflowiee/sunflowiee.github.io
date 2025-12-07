@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./lib/tailwind.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Molle&family=Sarina&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+        .sarina-regular {
+            font-family: "Sarina", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .molle-regular {
+            font-family: "Molle", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        
+        .fredoka {
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+        }
+
+        .sour-gummy {
+            font-family: "Sour Gummy", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body class="bg-[#fcf7fb]" id="beranda">
+    
+    <div class="transition-all lg:hidden fixed top-0 left-0 bottom-0 w-[250px] bg-white fredoka flex flex-col gap-2 p-3 z-50 -translate-x-[250px]" id="slider">
+        <button class="flex justify-end" onclick="toggleSlider()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#737373" fill="none" stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21.5H12H12C16.4783 21.5 18.7175 21.5 20.1088 20.1088C21.5 18.7175 21.5 16.4783 21.5 12V12V12C21.5 7.52165 21.5 5.28248 20.1088 3.89124C18.7175 2.5 16.4783 2.5 12 2.5C7.52166 2.5 5.28249 2.5 3.89124 3.89124C2.5 5.28249 2.5 7.52166 2.5 12C2.5 16.4783 2.5 18.7175 3.89124 20.1088C5.28248 21.5 7.52165 21.5 12 21.5Z" />
+                <path d="M15 9L9 14.9996M15 15L9 9.00039" />
+            </svg>
+        </button>
+        <a href="#" class="flex items-center gap-3  p-2 rounded-full hover:outline hover:outline-1 hover:outline-neutral-300 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#737373" fill="none" stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11.9896V14.5C3 17.7998 3 19.4497 4.02513 20.4749C5.05025 21.5 6.70017 21.5 10 21.5H14C17.2998 21.5 18.9497 21.5 19.9749 20.4749C21 19.4497 21 17.7998 21 14.5V11.9896C21 10.3083 21 9.46773 20.6441 8.74005C20.2882 8.01237 19.6247 7.49628 18.2976 6.46411L16.2976 4.90855C14.2331 3.30285 13.2009 2.5 12 2.5C10.7991 2.5 9.76689 3.30285 7.70242 4.90855L5.70241 6.46411C4.37533 7.49628 3.71179 8.01237 3.3559 8.74005C3 9.46773 3 10.3083 3 11.9896Z" />
+                <path d="M17 15.5H15V17.5H17V15.5Z" />
+            </svg>
+            Beranda
+        </a>
+        <a href="produk.html" class="flex items-center gap-3 p-2 rounded-full hover:outline hover:outline-1 hover:outline-neutral-300 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#737373" fill="none" stroke="#737373" stroke-width="1.5">
+                <path d="M3.00006 10.9871V15.4925C3.00006 18.3243 3.00006 19.7403 3.87874 20.62C4.75742 21.4998 6.17163 21.4998 9.00006 21.4998H15.0001C17.8285 21.4998 19.2427 21.4998 20.1214 20.62C21.0001 19.7403 21.0001 18.3243 21.0001 15.4925V10.9871" />
+                <path d="M15.0001 16.9768C14.316 17.584 13.2269 17.9768 12.0001 17.9768C10.7733 17.9768 9.68415 17.584 9.00006 16.9768" />
+                <path d="M17.7957 2.50294L6.14989 2.53202C4.41172 2.44248 3.96606 3.78259 3.96606 4.43768C3.96606 5.02359 3.89061 5.87774 2.8253 7.4831C1.75999 9.08846 1.84004 9.56536 2.44077 10.6767C2.93934 11.5991 4.20747 11.9594 4.86868 12.02C6.96889 12.0678 7.99072 10.2517 7.99072 8.97523C9.03257 12.1825 11.9956 12.1825 13.3159 11.8157C14.6386 11.4483 15.7718 10.1331 16.0391 8.97523C16.1951 10.4142 16.6682 11.2538 18.0663 11.8308C19.5145 12.4284 20.76 11.515 21.3848 10.9294C22.0097 10.3439 22.4107 9.04401 21.2968 7.6153C20.5286 6.63001 20.2085 5.7018 20.1033 4.73977C20.0424 4.18234 19.9888 3.58336 19.5972 3.20219C19.0248 2.64515 18.2036 2.47613 17.7957 2.50294Z" />
+            </svg>
+            Produk
+        </a>
+        <a href="tentang.html" class="flex items-center gap-3 p-2 rounded-full hover:outline hover:outline-1 hover:outline-neutral-300 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#737373" fill="none" stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 16V11.5" />
+                <path d="M12 8.01172V8.00172" />
+            </svg>
+            Tentang
+        </a>
+    </div>
+
+    <nav class="bg-[#fcf7fb] w-full h-15 lg:h-20 flex items-center px-5 justify-center lg:justify-between sticky top-0 z-20">
+        <button class="lg:hidden absolute left-3" onclick="toggleSlider()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#737373" fill="none" stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 5L16 5" />
+                <path d="M4 12L20 12" />
+                <path d="M4 19L12 19" />
+            </svg>
+        </button>
+        <h1 class="sarina-regular text-3xl text-pink-500">CookiesPaw</h1>
+        <div class="hidden lg:flex items-center gap-4 fredoka text-neutral-500">
+            <div class="flex items-center bg-white rounded-full p-2 pr-3">
+                <input type="text" name="search" id="search" placeholder="Cari dessert kesukaanmu..." class="outline-none mx-5 text-sm w-40">
+                <a href="#" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#737373" fill="none" stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 15L16.5 16.5" />
+                        <path d="M16.9333 19.0252C16.3556 18.4475 16.3556 17.5109 16.9333 16.9333C17.5109 16.3556 18.4475 16.3556 19.0252 16.9333L21.0667 18.9748C21.6444 19.5525 21.6444 20.4891 21.0667 21.0667C20.4891 21.6444 19.5525 21.6444 18.9748 21.0667L16.9333 19.0252Z" />
+                        <path d="M16.5 9.5C16.5 5.63401 13.366 2.5 9.5 2.5C5.63401 2.5 2.5 5.63401 2.5 9.5C2.5 13.366 5.63401 16.5 9.5 16.5C13.366 16.5 16.5 13.366 16.5 9.5Z" />
+                    </svg>
+                </a>
+            </div>
+            <a href="#" class="flex items-center gap-1  p-2 rounded-full hover:outline hover:outline-1 hover:outline-neutral-300 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#737373" fill="none" stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 11.9896V14.5C3 17.7998 3 19.4497 4.02513 20.4749C5.05025 21.5 6.70017 21.5 10 21.5H14C17.2998 21.5 18.9497 21.5 19.9749 20.4749C21 19.4497 21 17.7998 21 14.5V11.9896C21 10.3083 21 9.46773 20.6441 8.74005C20.2882 8.01237 19.6247 7.49628 18.2976 6.46411L16.2976 4.90855C14.2331 3.30285 13.2009 2.5 12 2.5C10.7991 2.5 9.76689 3.30285 7.70242 4.90855L5.70241 6.46411C4.37533 7.49628 3.71179 8.01237 3.3559 8.74005C3 9.46773 3 10.3083 3 11.9896Z" />
+                    <path d="M17 15.5H15V17.5H17V15.5Z" />
+                </svg>
+                Beranda
+            </a>
+            <a href="produk.html" class="flex items-center gap-1 p-2 rounded-full hover:outline hover:outline-1 hover:outline-neutral-300 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#737373" fill="none" stroke="#737373" stroke-width="1.5">
+                    <path d="M3.00006 10.9871V15.4925C3.00006 18.3243 3.00006 19.7403 3.87874 20.62C4.75742 21.4998 6.17163 21.4998 9.00006 21.4998H15.0001C17.8285 21.4998 19.2427 21.4998 20.1214 20.62C21.0001 19.7403 21.0001 18.3243 21.0001 15.4925V10.9871" />
+                    <path d="M15.0001 16.9768C14.316 17.584 13.2269 17.9768 12.0001 17.9768C10.7733 17.9768 9.68415 17.584 9.00006 16.9768" />
+                    <path d="M17.7957 2.50294L6.14989 2.53202C4.41172 2.44248 3.96606 3.78259 3.96606 4.43768C3.96606 5.02359 3.89061 5.87774 2.8253 7.4831C1.75999 9.08846 1.84004 9.56536 2.44077 10.6767C2.93934 11.5991 4.20747 11.9594 4.86868 12.02C6.96889 12.0678 7.99072 10.2517 7.99072 8.97523C9.03257 12.1825 11.9956 12.1825 13.3159 11.8157C14.6386 11.4483 15.7718 10.1331 16.0391 8.97523C16.1951 10.4142 16.6682 11.2538 18.0663 11.8308C19.5145 12.4284 20.76 11.515 21.3848 10.9294C22.0097 10.3439 22.4107 9.04401 21.2968 7.6153C20.5286 6.63001 20.2085 5.7018 20.1033 4.73977C20.0424 4.18234 19.9888 3.58336 19.5972 3.20219C19.0248 2.64515 18.2036 2.47613 17.7957 2.50294Z" />
+                </svg>
+                Produk
+            </a>
+            <a href="tentang.html" class="flex items-center gap-1 p-2 rounded-full hover:outline hover:outline-1 hover:outline-neutral-300 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" color="#737373" fill="none" stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 16V11.5" />
+                    <path d="M12 8.01172V8.00172" />
+                </svg>
+                Tentang
+            </a>
+            <button class="rounded-full bg-white py-2 px-3 flex gap-2 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" fill="none" stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M11.5001 2.5L12.5001 2.50001C16.7427 2.50006 18.864 2.50008 20.182 3.8181C21.5 5.13611 21.5 7.25741 21.5 11.5V12.5001C21.5 16.7427 21.5 18.8641 20.182 20.1821C18.864 21.5001 16.7426 21.5001 12.5 21.5001H11.5C7.25736 21.5001 5.13604 21.5001 3.81802 20.1821C2.5 18.8641 2.5 16.7427 2.5 12.5001V11.5C2.5 7.25732 2.5 5.13598 3.81804 3.81795C5.13607 2.49993 7.25741 2.49995 11.5001 2.5Z" />
+                    <path d="M11.9999 7.39502C13.9329 7.39502 15.4999 8.96202 15.4999 10.895C15.4999 12.828 13.9329 14.395 11.9999 14.395C10.0669 14.395 8.49988 12.828 8.49988 10.895C8.49988 8.96202 10.0669 7.39502 11.9999 7.39502Z" />
+                    <path d="M18.9823 20.895C18.7259 17.2624 15.6978 14.395 11.9999 14.395C8.302 14.395 5.27383 17.2624 5.01746 20.895" />
+                </svg>
+                Sign In
+            </button>
+        </div>
+    </nav>
+
+    <main class="pt-20 md:pt-0">
+        <div class="h-[calc(100svh-3.75rem)] md:h-[calc(100svh-5rem)] flex flex-col">
+            <div class="flex-1 flex justify-center items-center flex-col">
+                <h1 class="sour-gummy text-4xl text-[#6f4d38] text-center">Manis Harum<br>Temani Setiap Momentum.</h1>
+                <p class="text-center fredoka text-sm">
+                    Setiap produk diolah dengan presisi dan bahan terbaik<br>memberikan pengalaman dessert yang lembut, rapi<br>dan selalu bisa diandalkan.
+                </p>
+                <a href="produk.html" class="md:hidden md:absolute top-0 bg-pink-500 fredoka rounded-full p-3 text-white my-7">Temukan Kesukaanmu!</a>
+            </div>
+            
+            <div class="flex p-3 box-border justify-center gap-3 md:gap-9 items-end relative">
+                <a href="produk.html" class="hidden md:flex md:absolute top-0 bg-pink-500 fredoka rounded-full p-3 text-white">Temukan Kesukaanmu!</a>
+                <div class="h-80 md:h-50 flex md:flex-row flex-col gap-3 md:gap-9 md:items-end">
+                    <div class="relative shadow shadow-md/15 overflow-hidden flex items-end justify-center h-full w-40 bg-neutral-200 rounded-md">
+                        <img src="assets/latte_caramel.JPG" class="coffee object-cover min-h-full absolute">
+                        <img src="assets/latte_coffee.JPG" class="coffee object-cover min-h-full absolute transition-all duration-2000 opacity-0">
+                        <p class="w-full h-20 flex justify-center items-end pb-2 bg-gradient-to-t from-[rgba(0,0,0)] fredoka text-white to-[rgba(0,0,0,0)] z-10">drinks</p>
+                    </div>
+                    <div class="relative shadow shadow-md/15 overflow-hidden flex items-end bg-neutral-200 w-40 h-[60%] rounded-md">
+                        <img src="assets/cookie_biscof.JPG" class="cookies object-cover min-h-full absolute">
+                        <img src="assets/cookie_coklat.JPG" class="cookies object-cover min-h-full absolute transition-all duration-2000 opacity-0">
+                        <p class="w-full h-20 flex justify-center items-end pb-2 bg-gradient-to-t from-[rgba(0,0,0)] fredoka text-white to-[rgba(0,0,0,0)] z-10">cookies</p>
+                    </div>
+                </div>
+                <div class="h-80 md:h-50 flex md:flex-row flex-col gap-3 md:gap-9 md:items-end">
+                    <div class="relative shadow shadow-md/15 overflow-hidden flex items-end bg-neutral-200 w-40 h-[60%] rounded-md">
+                        <img src="assets/cake_matcha.JPG" class="cake object-cover min-h-full absolute">
+                        <img src="assets/cake_redvelvet.JPG" class="cake object-cover min-h-full absolute transition-all duration-2000 opacity-0">
+                        <p class="w-full h-20 flex justify-center items-end pb-2 bg-gradient-to-t from-[rgba(0,0,0)] fredoka text-white to-[rgba(0,0,0,0)] z-10">cakes</p>        
+                    </div>
+                    <div class="relative shadow shadow-md/15 overflow-hidden flex items-end justify-center h-full w-40 bg-neutral-200 rounded-md">
+                        <img src="assets/spageti_aglio_olio.JPG" class="pasta object-cover min-h-full absolute">
+                        <img src="assets/spageti_bolognese.JPG" class="pasta object-cover min-h-full absolute transition-all duration-2000 opacity-0">
+                        <p class="w-full h-20 flex justify-center items-end pb-2 bg-gradient-to-t from-[rgba(0,0,0)] fredoka text-white to-[rgba(0,0,0,0)] z-10">pasta</p>        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fredoka p-3 w-full mt-20 md:p-20">
+            <h1 class="text-xl text-neutral-800">Popular This Weeks!</h1>
+            <p class="mb-5 text-neutral-500 text-sm">All is Favorite Menu</p>
+            <div class="flex gap-8 overflow-x-auto pb-10" >
+                <div class="w-50 h-70 text-wrap h-65 flex flex-col flex-wrap justify-between">
+                    <div>
+                        <div class="w-50 h-50 object-cover rounded-lg overflow-hidden shadow shadow-md/15">
+                            <img src="./assets/cinnamon_roll_redvelvet.JPG">
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Cakes</p>
+                        <h1 class="font-bold text-gray-700 text-sm">Cinnamon Roll Redvelvet</h1>
+                    </div>
+                    <div class="flex justify-between">
+                        <h2 class="font-bold text-gray-800">Rp. 15,000</h2>
+                        <div class="flex gap-1 text-sm items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" fill="#ffbd04" stroke="#ffbd04" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z" />
+                            </svg>
+                            4.9/5
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-50 h-70 text-wrap h-65 flex flex-col justify-between">
+                    <div>
+                        <div class="w-50 h-50 object-cover rounded-lg overflow-hidden shadow shadow-md/15">
+                            <img src="./assets/brownies_cheesecake.JPG">
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Cakes</p>
+                        <h1 class="font-bold text-gray-700 text-sm">Brownies Cheese Cake</h1>
+                    </div>
+                    <div class="flex justify-between">
+                        <h2 class="font-bold text-gray-800">Rp. 18,000</h2>
+                        <div class="flex gap-1 text-sm items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" fill="#ffbd04" stroke="#ffbd04" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z" />
+                            </svg>
+                            4.9/5
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-50 h-70 text-wrap h-65 flex flex-col justify-between">
+                    <div>
+                        <div class="w-50 h-50 object-cover rounded-lg overflow-hidden shadow shadow-md/15">
+                            <img src="./assets/cookie_biscof.JPG">
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Cookies</p>
+                        <h1 class="font-bold text-gray-700 text-sm">Cookie Biscof</h1>
+                    </div>
+                    <div class="flex justify-between">
+                        <h2 class="font-bold text-gray-800">Rp. 22,000</h2>
+                        <div class="flex gap-1 text-sm items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" fill="#ffbd04" stroke="#ffbd04" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z" />
+                            </svg>
+                            4.9/5
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-50 h-70 text-wrap h-65 flex flex-col justify-between">
+                    <div>
+                        <div class="w-50 h-50 object-cover rounded-lg overflow-hidden shadow shadow-md/15">
+                            <img src="./assets/cake_matcha.JPG">
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Cakes</p>
+                        <h1 class="font-bold text-gray-700 text-sm">Matcha Cake</h1>
+                    </div>
+                    <div class="flex justify-between">
+                        <h2 class="font-bold text-gray-800">Rp. 24,000</h2>
+                        <div class="flex gap-1 text-sm items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" fill="#ffbd04" stroke="#ffbd04" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z" />
+                            </svg>
+                            4.9/5
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-50 h-70 text-wrap h-65 flex flex-col justify-between">
+                    <div>
+                        <div class="w-50 h-50 object-cover rounded-lg overflow-hidden shadow shadow-md/15">
+                            <img src="./assets/matcha_latte.JPG">
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1">Drinks</p>
+                        <h1 class="font-bold text-gray-700 text-sm">Macha Latte</h1>
+                    </div>
+                    <div class="flex justify-between">
+                        <h2 class="font-bold text-gray-800">Rp. 20,000</h2>
+                        <div class="flex gap-1 text-sm items-center text-gray-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" fill="#ffbd04" stroke="#ffbd04" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z" />
+                            </svg>
+                            4.9/5
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="absolute left-0 right-0 h-20 text-gray-400 fredoka  flex justify-center items-center">cookiespaw&copy;2025 - All rights reserved</footer>
+    <script src="./script/global.js"></script>
+</body>
+</html>
