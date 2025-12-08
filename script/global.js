@@ -20,9 +20,9 @@ const imgCookies = [...$class("cookies"), [
     "./assets/cookie_matcha_cheese.JPG",
 ]];
 const imgCake = [...$class("cake"), [
-    "./assets/cake_matcha.JPG",
-    "./assets/cake_redvelvet.JPG",
-    "./assets/cake_tiramisu.JPG",
+    "./assets/cromboloni.JPG",
+    "./assets/cinnamon_roll.JPG",
+    "./assets/cream_puff.JPG",
 ]];
 
 const imgPasta = [...$class("pasta"), [
